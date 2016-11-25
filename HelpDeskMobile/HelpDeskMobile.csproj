@@ -40,7 +40,7 @@
     <Compile Include="TodoItem.cs" />
     <Compile Include="TodoItemManager.cs" />
     <Compile Include="Models\Ticket.cs" />
-    <Compile Include="ViewModels\TicketsViewModel.cs" />
+    <Compile Include="ViewModels\TicketListViewModel.cs" />
     <Compile Include="Services\TicketService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

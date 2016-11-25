@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace HelpDeskMobile.ViewModels
 {
-	public class TicketsViewModel
+	public class TicketListViewModel
 	{
 		public ObservableCollection<Ticket> Tickets { get; set; }
 
@@ -15,7 +15,7 @@ namespace HelpDeskMobile.ViewModels
 
 		public Command GetTicketsFromServerCommand { get; set; }
 
-		public TicketsViewModel()
+		public TicketListViewModel()
 		{
 			Tickets = new ObservableCollection<Ticket>();
 			IsBusy = false;
