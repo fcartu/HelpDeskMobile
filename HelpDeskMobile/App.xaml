@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Application 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="HelpDeskMobile.App">
+	<Application.Resources>
+		<ResourceDictionary>
+			<Color x:Key="DetailTextColor">#979797</Color>
+			<Color x:Key="ListSeparator">#C8C7CC</Color>
+			
+			<Thickness x:Key="StandardPadding">16</Thickness>
+
+			<x:Double x:Key="StandardSpacing">16</x:Double>
+
+			<OnPlatform x:TypeArguments="Color" Android="#F5F5F5" iOS="White" WinPhone="White" x:Key="WindowBackground"/>
+			<OnPlatform x:TypeArguments="x:Double" Android="16" iOS="16" x:Key="TicketListItemTextStyleSize" />
+			<OnPlatform x:TypeArguments="x:Double" Android="14" iOS="14" x:Key="TicketListItemTextStyleSizeSmall" />
+			<OnPlatform x:TypeArguments="x:Double" Android="13" iOS="13" x:Key="TicketListItemDetailTextStyleSize" />
+
+			<Style x:Key="TicketListItemTextStyleBold" TargetType="Label" BaseResourceKey="ListItemTextStyle">
+                <Setter Property="FontSize" Value="{DynamicResource TicketListItemTextStyleSize}" />
+                <Setter Property="Font" Value="Semibold"/>
+            </Style>
+
+			<Style x:Key="TicketListItemTextStyle" TargetType="Label" BaseResourceKey="ListItemTextStyle">
+                <Setter Property="FontSize" Value="{DynamicResource TicketListItemTextStyleSize}" />
+            </Style>
+
+			<Style x:Key="TicketListItemTextStyle2" TargetType="Label" BaseResourceKey="TicketListItemTextStyle">
+                <Setter Property="FontSize" Value="{DynamicResource TicketListItemTextStyleSizeSmall}" />
+            </Style>
+
+			<Style x:Key="TicketListItemDetailTextStyle" TargetType="Label" BaseResourceKey="ListItemDetailTextStyle">
+                <Setter Property="FontSize" Value="{DynamicResource TicketListItemDetailTextStyleSize}" />
+                <Setter Property="TextColor" Value="{DynamicResource DetailTextColor}"/>
+            </Style>
+			
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

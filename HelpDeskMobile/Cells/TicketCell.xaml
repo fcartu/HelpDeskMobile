@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="HelpDeskMobile.Cells.TicketCellView"
+		x:Name="TicketCell">
+	<Grid Padding="{DynamicResource StandardPadding}" 
+          ColumnSpacing="{StaticResource StandardSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+		<Label Grid.Row="0"
+				Text="{Binding TicketId, StringFormat='# {0}'}" 
+				HorizontalTextAlignment="Start"
+				VerticalTextAlignment="Center"
+				Style="{DynamicResource TicketListItemDetailTextStyle2}"/>
+
+		<Label Grid.Row="0"
+				Grid.Column="1"
+				Grid.ColumnSpan="2"
+				XAlign="End"
+				Text="{Binding CreatedAt, StringFormat='{0:dd MMM yyyy, hh:mm}'}"
+				Style="{DynamicResource TicketListItemDetailTextStyle2}" />
+
+		<Label Grid.Row="1" 
+				Grid.Column="0"
+				Grid.ColumnSpan="2"
+				Text="{Binding Title}" 
+				Style="{DynamicResource TicketListItemTextStyle}" />
+
+		<Label Grid.Row="2" 
+				Text="{Binding Username}"
+				Style="{DynamicResource TicketListItemDetailTextStyle}"/>
+
+	</Grid>
+</ContentView>

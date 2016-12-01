@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using HelpDeskMobile.ViewModels;
 using Xamarin.Forms;
 
-namespace HelpDeskMobile
+namespace HelpDeskMobile.Pages
 {
 	public partial class TicketListPage : ContentPage
 	{
 		public TicketListPage()
 		{
 			InitializeComponent();
+
+			BindingContext = new TicketListViewModel();
 		}
 	}
 }

@@ -23,31 +23,29 @@ namespace HelpDeskMobile.ViewModels
 			AddNewTicketCommand = new Command(x => AddNewTicket());
 			RefreshTicketsCommand = new Command(x => RefreshTickets());
 
-			if (isDesignMode)
-			{
-				Tickets = new ObservableCollection<Ticket>();
-				Tickets.Add(
-					new Ticket()
-					{
-						Id = "1",
-						TicketId = "1000",
-						Title = "User cannot login to the system",
-						CreatedAt = new DateTime(2016, 11, 22, 6, 15, 45).ToString(),
-						Priority = "High",
-						Username = "rguerra"
-					});
-				Tickets.Add(
-					new Ticket()
-					{
-						Id = "2",
-						TicketId = "1001",
-						Title = "Ticket test 2",
-						CreatedAt = new DateTime(2016, 11, 24, 15, 41, 20).ToString(),
-						Priority = "Low",
-						Username = "pperez"
+
+			Tickets = new ObservableCollection<Ticket>();
+			Tickets.Add(
+				new Ticket()
+				{
+					Id = "1",
+					TicketId = "1000",
+					Title = "User cannot login to the system",
+					CreatedAt = new DateTime(2016, 11, 22, 6, 15, 45).ToString(),
+					Priority = "High",
+					Username = "rguerra"
+				});
+			Tickets.Add(
+				new Ticket()
+				{
+					Id = "2",
+					TicketId = "1001",
+					Title = "Ticket test 2",
+					CreatedAt = new DateTime(2016, 11, 24, 15, 41, 20).ToString(),
+					Priority = "Low",
+					Username = "pperez"
 				}
 			);
-			}
 		}
 
 		void AddNewTicket()
