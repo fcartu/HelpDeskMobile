@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace HelpDeskMobile.Pages
 {
-	public partial class TicketListPage : ContentPage
+	public partial class TicketsPage : ContentPage
 	{
-		public TicketListPage()
+		public TicketsPage()
 		{
 			InitializeComponent();
 

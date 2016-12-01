@@ -41,8 +41,8 @@
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="ViewModels\TicketListViewModel.cs" />
     <Compile Include="Services\TicketService.cs" />
-    <Compile Include="Pages\TicketListPage.xaml.cs">
-      <DependentUpon>TicketListPage.xaml</DependentUpon>
+    <Compile Include="Pages\TicketsPage.xaml.cs">
+      <DependentUpon>TicketsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -89,7 +89,7 @@
     <EmbeddedResource Include="TodoList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\TicketListPage.xaml">
+    <EmbeddedResource Include="Pages\TicketsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="App.xaml">

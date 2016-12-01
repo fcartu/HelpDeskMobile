@@ -19,7 +19,7 @@ namespace HelpDeskMobile
 			InitializeComponent();
 
 			// The root page of your application
-			MainPage = new NavigationPage(new TicketListPage());
+			MainPage = new NavigationPage(new TicketsPage());
 		}
 
 		protected override void OnStart()
