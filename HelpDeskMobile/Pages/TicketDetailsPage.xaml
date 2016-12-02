@@ -38,7 +38,7 @@
             <StackLayout Padding="{StaticResource StandardPadding}" BackgroundColor="White">
               <Label Text="{Binding Ticket.Description}" Style="{DynamicResource TicketListItemTextStyle}" />
             </StackLayout>
-            <!--<local:FooterDivider/>-->
+            <local:FooterDivider/>
           </StackLayout>
         </local:CardView>
         
