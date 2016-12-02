@@ -8,6 +8,7 @@
 			<Color x:Key="Primary">#7635EB</Color>
 			<Color x:Key="DetailTextColor">#979797</Color>
 			<Color x:Key="ListSeparator">#C8C7CC</Color>
+      <Color x:Key="NavigationText">White</Color>
 			
 			<Thickness x:Key="StandardPadding">16</Thickness>
 

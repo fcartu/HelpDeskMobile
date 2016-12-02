@@ -19,7 +19,11 @@ namespace HelpDeskMobile
 			InitializeComponent();
 
 			// The root page of your application
-			MainPage = new NavigationPage(new TicketsPage());
+			MainPage = new NavigationPage(new TicketsPage())
+            {
+                BarBackgroundColor = (Color)Current.Resources["Primary"],
+                BarTextColor = (Color)Current.Resources["NavigationText"]
+        };
 		}
 
 		protected override void OnStart()
