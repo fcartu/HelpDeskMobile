@@ -27,7 +27,7 @@
 				Grid.Column="1"
 				Grid.ColumnSpan="2"
 				XAlign="End"
-				Text="{Binding CreatedAt, StringFormat='{0:dd MMM yyyy, hh:mm}'}"
+				Text="{Binding CreatedAtDate, StringFormat='{0:dd MMM yyyy, hh:mm}'}"
 				Style="{DynamicResource TicketListItemDetailTextStyle2}" />
 
 		<Label Grid.Row="1" 

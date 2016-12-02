@@ -45,6 +45,16 @@ namespace HelpDeskMobile.Models
 		[CreatedAt]
 		public string CreatedAt { get; set; }
 
+		public DateTime CreatedAtDate
+		{
+			get
+			{
+				DateTime created;
+				DateTime.TryParse(CreatedAt, out created);
+				return created;
+			}
+		}
+
 		[UpdatedAt]
 		public string UpdatedAt { get; set; }
 
