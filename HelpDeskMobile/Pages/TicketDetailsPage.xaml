@@ -30,11 +30,24 @@
             BackgroundColor="{DynamicResource WindowBackgroundTable}"
             Spacing="{DynamicResource CardSpacing}"
             Padding="{DynamicResource CardPadding}">
+
+        <!--Basic Info-->
+        <local:CardView>
+          <StackLayout Spacing="0">
+            <local:LabelSection Text="Basic Info"/>
+            <local:HeaderDivider/>
+            <StackLayout Padding="{StaticResource StandardPadding}" BackgroundColor="White">
+              <Label Text="{Binding Ticket.Description}" Style="{DynamicResource TicketListItemTextStyle}" />
+            </StackLayout>
+            <local:FooterDivider/>
+          </StackLayout>
+        </local:CardView>
+        
         <!--Description-->
-        <local:CardView IsVisible="{Binding Ticket.Description}">
+        <local:CardView IsVisible="true">
           <StackLayout Spacing="0">
             <local:LabelSection Text="Description"/>
-            <!--<local:HeaderDivider/>-->
+            <local:HeaderDivider/>
             <StackLayout Padding="{StaticResource StandardPadding}" BackgroundColor="White">
               <Label Text="{Binding Ticket.Description}" Style="{DynamicResource TicketListItemTextStyle}" />
             </StackLayout>
