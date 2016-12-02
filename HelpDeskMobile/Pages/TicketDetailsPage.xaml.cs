@@ -8,6 +8,8 @@ namespace HelpDeskMobile
 		public TicketDetailsPage(Ticket ticket)
 		{
 			InitializeComponent();
+
+			BindingContext = new TicketDetailsViewModel(Navigation, ticket);
 		}
 	}
 }

@@ -2,8 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		x:Class="HelpDeskMobile.TicketDetailsPage"
-		Title="Ticket Details">
-	<ContentPage.Content>
-		<Label Text="Hello World" />
-	</ContentPage.Content>
+		Title="Ticket Details"
+		NavigationPage.BackButtonTitle="Back">
+
+	<ScrollView Grid.RowSpan="2" x:Name="MainScroll">
+		<StackLayout Spacing="0">
+			<StackLayout 
+                   Padding="16,32,16,16" 
+                   Spacing="{StaticResource SmallSpacing}"
+                   HorizontalOptions="FillAndExpand" 
+                   BackgroundColor="{DynamicResource Primary}">
+				<Label 
+					Text="{Binding Ticket.Title}"
+                    FontSize="Large"
+                    Style="{DynamicResource TitleStyle}"
+                    TextColor="White" />
+
+				<Label 
+					x:Name="TicketDate"
+                    Text="{Binding Ticket.CreatedAtDate, StringFormat='{0:dd MMM yyyy, hh:mm}'}"
+                    Style="{DynamicResource EvolveDetailTextStyle}"
+                    TextColor="White" />
+			</StackLayout>
+		</StackLayout>
+	</ScrollView>
 </ContentPage>
