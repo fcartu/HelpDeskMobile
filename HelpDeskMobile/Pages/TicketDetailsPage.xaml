@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		x:Class="HelpDeskMobile.TicketDetailsPage"
+    xmlns:local="clr-namespace:HelpDeskMobile.Controls;assembly=HelpDeskMobile"
 		Title="Ticket Details"
 		NavigationPage.BackButtonTitle="Back">
 
@@ -24,6 +25,24 @@
                     Style="{DynamicResource EvolveDetailTextStyle}"
                     TextColor="White" />
 			</StackLayout>
+
+      <StackLayout
+            BackgroundColor="{DynamicResource WindowBackgroundTable}"
+            Spacing="{DynamicResource CardSpacing}"
+            Padding="{DynamicResource CardPadding}">
+        <!--Description-->
+        <local:CardView IsVisible="{Binding Ticket.Description}">
+          <StackLayout Spacing="0">
+            <local:LabelSection Text="Description"/>
+            <!--<local:HeaderDivider/>-->
+            <StackLayout Padding="{StaticResource StandardPadding}" BackgroundColor="White">
+              <Label Text="{Binding Ticket.Description}" Style="{DynamicResource TicketListItemTextStyle}" />
+            </StackLayout>
+            <!--<local:FooterDivider/>-->
+          </StackLayout>
+        </local:CardView>
+        
+      </StackLayout>
 		</StackLayout>
 	</ScrollView>
 </ContentPage>
