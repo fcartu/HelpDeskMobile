@@ -34,8 +34,13 @@ namespace HelpDeskMobile.ViewModels
 					CreatedAt = new DateTime(2016, 11, 22, 6, 15, 45).ToString(),
                     Description = "The same thing that happens few months ago with my user in the main system",
                     Priority = "High",
-					Username = "rguerra"
-				});
+					Username = "rguerra",
+                    Status = "Open",
+                    Area = "Customer",
+                    Location = "Anchorage",
+                    Category = "Meat",
+                    Subcategory = "Poultry"
+                });
 			Tickets.Add(
 				new Ticket()
 				{
@@ -45,8 +50,13 @@ namespace HelpDeskMobile.ViewModels
 					CreatedAt = new DateTime(2016, 11, 24, 15, 41, 20).ToString(),
                     Description = "I have no idea what i need to put here, but I need to add something long",
 					Priority = "Low",
-					Username = "pperez"
-				}
+					Username = "pperez",
+                    Status = "Open",
+                    Area = "Accounting",
+                    Location = "Lincoln",
+                    Category = "Beverages",
+                    Subcategory = "Confections"
+                }
 			);
 		}
 

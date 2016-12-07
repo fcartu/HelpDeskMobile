@@ -36,9 +36,50 @@
           <StackLayout Spacing="0">
             <local:LabelSection Text="Basic Info"/>
             <local:HeaderDivider/>
-            <StackLayout Padding="{StaticResource StandardPadding}" BackgroundColor="White">
-              <Label Text="{Binding Ticket.Description}" Style="{DynamicResource TicketListItemTextStyle}" />
-            </StackLayout>
+            <Grid RowSpacing="5" 
+                  BackgroundColor="White"
+                  Padding="{StaticResource StandardPadding}">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+            
+              <Label Grid.Row="0" Grid.ColumnSpan="2" 
+                     Text="{Binding Ticket.Status}" />
+            
+              <Label Grid.Row="1" Grid.Column="0" 
+                     Text="{Binding Ticket.Username}"
+                     Style="{DynamicResource TicketListItemTextStyle}"/>
+            
+              <Label Grid.Row="1" Grid.Column="1" 
+                     Text="{Binding Ticket.Priority}"
+                     HorizontalTextAlignment="Center"
+                     Style="{DynamicResource TicketListItemTextStyle}"/>
+            
+              <Label Grid.Row="2" Grid.Column="0" 
+                     Text="{Binding Ticket.Area}"
+                     Style="{DynamicResource TicketListItemTextStyle}"/>
+              
+              <Label Grid.Row="2" Grid.Column="1" 
+                     Text="{Binding Ticket.Location}"
+                     HorizontalTextAlignment="Center"
+                     Style="{DynamicResource TicketListItemTextStyle}"/>
+            
+              <Label Grid.Row="3" Grid.Column="0" 
+                     Text="{Binding Ticket.Category}"
+                     Style="{DynamicResource TicketListItemTextStyle}"/>
+            
+              <Label Grid.Row="3" Grid.Column="1" 
+                     Text="{Binding Ticket.Subcategory}"
+                     HorizontalTextAlignment="Center"
+                     Style="{DynamicResource TicketListItemTextStyle}"/>
+            </Grid>
             <local:FooterDivider/>
           </StackLayout>
         </local:CardView>
