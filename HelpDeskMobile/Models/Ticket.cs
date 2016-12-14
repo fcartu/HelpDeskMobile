@@ -1,14 +1,12 @@
 ﻿using System;
 using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json;
+using HelpDeskMobile.DataStore.DataObjects;
 
 namespace HelpDeskMobile.Models
 {
-	public class Ticket
-	{
-		[JsonProperty(PropertyName = "id")]
-		public string Id { get; set; }
-
+	public class Ticket : BaseDataObject
+    {
 		[JsonProperty(PropertyName = "ticketId")]
 		public string TicketId { get; set; }
 
@@ -57,8 +55,5 @@ namespace HelpDeskMobile.Models
 
 		[UpdatedAt]
 		public string UpdatedAt { get; set; }
-
-		[Version]
-		public string Version { get; set; }
 	}
 }
