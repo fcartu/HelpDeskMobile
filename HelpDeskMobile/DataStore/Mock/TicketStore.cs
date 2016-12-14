@@ -2,6 +2,7 @@
 using HelpDeskMobile.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace HelpDeskMobile.DataStore.Mock
@@ -31,7 +32,7 @@ namespace HelpDeskMobile.DataStore.Mock
                     TicketId = i.ToString(),
                     Title = titlesShort[i],
                     Description = descriptions[i],
-                    CreatedAt = new DateTime(2016, 11, i).ToString(),
+                    CreatedAt = new DateTime(2016, 11, i+1).ToString(),
                     Area = areas[i],
                     Priority = priorities[i],
                     Status = "Open",
@@ -44,6 +45,22 @@ namespace HelpDeskMobile.DataStore.Mock
 
                 
             }
+        }
+
+        public async override Task<Ticket> GetItemAsync(string id)
+        {
+            if (!initialized)
+                await InitializeStore();
+
+            return tickets.FirstOrDefault(s => s.Id == id);
+        }
+
+        public async override Task<IEnumerable<Ticket>> GetItemsAsync(bool forceRefresh = false)
+        {
+            if (!initialized)
+                await InitializeStore();
+
+            return tickets as IEnumerable<Ticket>;
         }
 
         string[] descriptions = new[] {

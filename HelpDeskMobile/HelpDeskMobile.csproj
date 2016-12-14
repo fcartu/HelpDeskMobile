@@ -49,6 +49,7 @@
     <Compile Include="DataStore\Azure\TicketStore.cs" />
     <Compile Include="DataStore\DataObjects\BaseDataObject.cs" />
     <Compile Include="DataStore\Mock\BaseStore.cs" />
+    <Compile Include="DataStore\Mock\StoreManager.cs" />
     <Compile Include="DataStore\Mock\TicketStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TodoList.xaml.cs">

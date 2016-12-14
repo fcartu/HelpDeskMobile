@@ -19,10 +19,12 @@ namespace HelpDeskMobile.ViewModels
             if (mock)
             {
                 DependencyService.Register<ITicketStore, DataStore.Mock.TicketStore>();
+                DependencyService.Register<IStoreManager, DataStore.Mock.StoreManager>();
             }
             else
             {
                 DependencyService.Register<ITicketStore, DataStore.Azure.TicketStore>();
+                DependencyService.Register<IStoreManager, DataStore.Azure.StoreManager>();
             }
         }
     }

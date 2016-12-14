@@ -11,7 +11,7 @@ namespace HelpDeskMobile.Pages
 		{
 			InitializeComponent();
 
-			BindingContext = new TicketListViewModel();
+			BindingContext = new TicketListViewModel(Navigation);
 
 			ListViewTickets.ItemSelected += async (sender, e) => 
 			{

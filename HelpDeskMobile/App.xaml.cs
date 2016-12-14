@@ -4,26 +4,19 @@ using Xamarin.Forms;
 
 namespace HelpDeskMobile
 {
-	public static class ViewModelLocator
-	{
-		static TicketListViewModel ticketVM;
-
-		public static TicketListViewModel TicketListVM
-		=> ticketVM ?? (ticketVM = new TicketListViewModel(true));
-	}
-
 	public partial class App : Application
 	{
 		public App()
 		{
 			InitializeComponent();
+            ViewModelBase.Init();
 
-			// The root page of your application
-			MainPage = new NavigationPage(new TicketsPage())
+            // The root page of your application
+            MainPage = new NavigationPage(new TicketsPage())
             {
                 BarBackgroundColor = (Color)Current.Resources["Primary"],
                 BarTextColor = (Color)Current.Resources["NavigationText"]
-        };
+            };
 		}
 
 		protected override void OnStart()
