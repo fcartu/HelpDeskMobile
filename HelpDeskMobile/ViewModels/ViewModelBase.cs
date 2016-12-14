@@ -1,9 +1,4 @@
 ﻿using HelpDeskMobile.DataStore.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace HelpDeskMobile.ViewModels
@@ -11,6 +6,8 @@ namespace HelpDeskMobile.ViewModels
     public class ViewModelBase
     {
         protected INavigation Navigation { get; }
+
+        protected IStoreManager StoreManager { get; } = DependencyService.Get<IStoreManager>();
 
         public ViewModelBase(INavigation navigation = null)
         {
@@ -25,7 +22,7 @@ namespace HelpDeskMobile.ViewModels
             }
             else
             {
-                //TODO: Implement azure store.
+                DependencyService.Register<ITicketStore, DataStore.Azure.TicketStore>();
             }
         }
     }

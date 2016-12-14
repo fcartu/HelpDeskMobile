@@ -46,6 +46,7 @@
     <Compile Include="DataStore\Abstractions\ITicketStore.cs" />
     <Compile Include="DataStore\Azure\BaseStore.cs" />
     <Compile Include="DataStore\Azure\StoreManager.cs" />
+    <Compile Include="DataStore\Azure\TicketStore.cs" />
     <Compile Include="DataStore\DataObjects\BaseDataObject.cs" />
     <Compile Include="DataStore\Mock\BaseStore.cs" />
     <Compile Include="DataStore\Mock\TicketStore.cs" />
