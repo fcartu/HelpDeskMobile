@@ -10,7 +10,7 @@ using Android.OS;
 
 namespace HelpDeskMobile.Droid
 {
-	[Activity (Label = "HelpDeskMobile.Droid",
+	[Activity (Label = "HelpDesk Mobile",
 		Icon = "@drawable/icon",
 		MainLauncher = true,
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
