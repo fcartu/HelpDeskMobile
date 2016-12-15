@@ -28,7 +28,7 @@
 						IsRefreshing="{Binding IsBusy, Mode=OneWay}"
 						CachingStrategy="RecycleElement"
 						HasUnevenRows="true"
-						IsPullToRefreshEnabled="true" 
+						IsPullToRefreshEnabled="{Binding IsNotBusy}" 
 						RefreshCommand="{Binding RefreshTicketsCommand}"
 						AbsoluteLayout.LayoutFlags="All"
 						AbsoluteLayout.LayoutBounds="0,0,1,1">

@@ -31,7 +31,15 @@ namespace HelpDeskMobile
 
 		protected override void OnResume()
 		{
-			// Handle when your app resumes
-		}
+            var mainNav = MainPage as NavigationPage;
+            if (mainNav == null)
+                return;
+
+            var ticketPage = mainNav.CurrentPage as TicketsPage;
+            if (ticketPage != null)
+            {
+                ticketPage.OnResume();
+            }
+        }
 	}
 }

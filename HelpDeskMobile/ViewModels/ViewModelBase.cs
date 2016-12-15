@@ -1,9 +1,10 @@
 ﻿using HelpDeskMobile.DataStore.Abstractions;
+using MvvmHelpers;
 using Xamarin.Forms;
 
 namespace HelpDeskMobile.ViewModels
 {
-    public class ViewModelBase
+    public class ViewModelBase : BaseViewModel
     {
         protected INavigation Navigation { get; }
 

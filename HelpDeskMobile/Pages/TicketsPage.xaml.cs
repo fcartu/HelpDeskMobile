@@ -7,7 +7,10 @@ namespace HelpDeskMobile.Pages
 {
 	public partial class TicketsPage : ContentPage
 	{
-		public TicketsPage()
+        TicketListViewModel vm;
+        TicketListViewModel ViewModel => vm ?? (vm = BindingContext as TicketListViewModel);
+
+        public TicketsPage()
 		{
 			InitializeComponent();
 
@@ -39,12 +42,27 @@ namespace HelpDeskMobile.Pages
 			base.OnAppearing();
 
 			ListViewTickets.ItemTapped += ListViewTapped;
-		}
+
+            UpdatePage();
+        }
 
 		protected override void OnDisappearing()
 		{
 			base.OnDisappearing();
 			ListViewTickets.ItemTapped -= ListViewTapped;
 		}
-	}
+
+        void UpdatePage()
+        {
+            if ((ViewModel?.Tickets?.Count ?? 0) == 0)
+            {
+                ViewModel?.RefreshTicketsCommand?.Execute(true);
+            }
+        }
+
+        public void OnResume()
+        {
+            UpdatePage();
+        }
+    }
 }
